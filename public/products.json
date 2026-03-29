@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Resume Kit",
+    "description": "Perfect for beginners to create clean and professional resumes quickly.",
+    "price": 0,
+    "period": "one-time",
+    "tagType": "new",
+    "features": ["10+ templates", "Basic customization", "Download as PDF"],
+    "icon": "https://i.ibb.co.com/p66rxDtM/writing-2327400-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Pro Resume Builder",
+    "description": "Advanced resume builder with ATS-friendly optimization tools.",
+    "price": 15,
+    "period": "monthly",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Export to PDF",
+      "Custom sections"
+    ],
+    "icon": "https://i.ibb.co.com/gLF6c8M9/design-tool.png"
+  },
+  {
+    "id": 3,
+    "name": "Portfolio Website Kit",
+    "description": "Create stunning personal portfolio websites without coding.",
+    "price": 49,
+    "period": "one-time",
+    "tagType": "best seller",
+    "features": [
+      "50+ layouts",
+      "Responsive design",
+      "SEO friendly",
+      "Easy deployment"
+    ],
+    "icon": "https://i.ibb.co.com/qY2hVVwF/portfolio.png"
+  },
+  {
+    "id": 4,
+    "name": "Job Tracker Pro",
+    "description": "Track your job applications and manage your career pipeline efficiently.",
+    "price": 5,
+    "period": "monthly",
+    "tagType": "popular",
+    "features": [
+      "Unlimited job tracking",
+      "Interview reminders",
+      "Analytics dashboard"
+    ],
+    "icon": "https://i.ibb.co.com/Wv1bKNgn/operation.png"
+  },
+  {
+    "id": 5,
+    "name": "Cover Letter Generator",
+    "description": "Generate tailored cover letters for any job in seconds.",
+    "price": 10,
+    "period": "monthly",
+    "tagType": "new",
+    "features": [
+      "AI-generated content",
+      "Multiple formats",
+      "Editable templates"
+    ],
+    "icon": "https://i.ibb.co.com/j9hph771/icons8-cover-letter-64.png"
+  },
+  {
+    "id": 6,
+    "name": "Interview Prep Master",
+    "description": "Prepare for interviews with curated questions and mock sessions.",
+    "price": 29,
+    "period": "one-time",
+    "tagType": "best seller",
+    "features": ["500+ questions", "Mock interviews", "Expert tips"],
+    "icon": "https://i.ibb.co.com/fL17nGx/interview.png"
+  },
+  {
+    "id": 7,
+    "name": "LinkedIn Optimizer",
+    "description": "Boost your LinkedIn profile visibility and engagement.",
+    "price": 7,
+    "period": "monthly",
+    "tagType": "popular",
+    "features": [
+      "Profile analysis",
+      "Keyword suggestions",
+      "Headline generator"
+    ],
+    "icon": "https://i.ibb.co.com/5WnyBB89/optimizer.png"
+  },
+  {
+    "id": 8,
+    "name": "Career Growth Bundle",
+    "description": "All-in-one package for job seekers and professionals.",
+    "price": 99,
+    "period": "yearly",
+    "tagType": "best seller",
+    "features": ["All tools included", "Priority support", "Exclusive updates"],
+    "icon": "https://i.ibb.co.com/Z6TNbnQM/career-growth.png"
+  }
+]
