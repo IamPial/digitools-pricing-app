@@ -7,10 +7,10 @@ const Features = () => {
     <div>
       <div className="container mx-auto py-30">
         <div className="flex flex-col justify-center items-center space-y-4">
-          <h2 className="text-5xl  text-slate-900 font-extrabold">
+          <h2 className="text-4xl md:text-5xl  text-slate-900 font-extrabold">
             Premium Digital Tools
           </h2>
-          <p className="text-slate-400 text-center text-[16px] leading-8">
+          <p className="text-slate-400 text-center text-sm md:text-[16px] leading-8">
             Choose from our curated collection of premium digital products
             designed <br /> to boost your productivity and creativity.{" "}
           </p>
