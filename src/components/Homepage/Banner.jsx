@@ -32,9 +32,7 @@ const Banner = () => {
             >
               Explore Products
             </button>
-            <div
-              className={`${toggleBtn === "watch" ? "border-none" : "bg-linear-to-r border from-[#4f39f6] to-[#9514fa] bg-clip-border border-transparent"}  inline-block rounded-full`}
-            >
+            <div className="bg-linear-to-r border  from-[#4f39f6] to-[#9514fa] bg-clip-border border-transparent  inline-block rounded-full">
               <button
                 onClick={() => setToggleBtn("watch")}
                 className={`btn rounded-full p-6 ${toggleBtn === "watch" ? "bg-linear-to-r from-[#4f39f6] to-[#9514fa]" : "bg-white"} bg-white`}
