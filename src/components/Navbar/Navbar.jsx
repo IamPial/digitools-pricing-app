@@ -1,5 +1,6 @@
 import React from "react";
 import logoImg from "../../assets/logo.png";
+import cartImg from "../../assets/shopping-cart.png";
 
 const Navbar = () => {
   return (
@@ -68,8 +69,19 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end gap-3">
+          <div className="indicator">
+            <span className="indicator-item badge p-2 h-4 w-4 badge-secondary rounded-full text-[10px] ">
+              12
+            </span>
+            <img className="" src={cartImg} alt="cart" />
+          </div>
+          <button className="btn rounded-full bg-white text-neutral-900 hover:bg-linear-to-r from-[#4f39f6] to-[#9514fa] border-none hover:text-white font-semibold">
+            Login
+          </button>
+          <a className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-full border-none text-white font-semibold">
+            Get Started
+          </a>
         </div>
       </div>
     </div>
