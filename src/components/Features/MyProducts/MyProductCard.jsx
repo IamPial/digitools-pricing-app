@@ -1,16 +1,6 @@
 import React from "react";
-import { FaCheck } from "react-icons/fa6";
 
-// {
-//     "id": 1,
-//     "name": "Starter Resume Kit",
-//     "description": "Perfect for beginners to create clean and professional resumes quickly.",
-//     "price": 0,
-//     "period": "one-time",
-//     "tagType": "new",
-//     "features": ["10+ templates", "Basic customization", "Download as PDF"],
-//     "icon": "https://i.ibb.co.com/p66rxDtM/writing-2327400-1.png"
-//   },
+import MyProductFeatureListItem from "./MyProductFeatureListItem";
 
 const MyProductCard = ({ product }) => {
   return (
@@ -32,31 +22,21 @@ const MyProductCard = ({ product }) => {
           )}
         </div>
         <div className=" p-6 space-y-4">
-          <img src="https://i.ibb.co.com/qY2hVVwF/portfolio.png" alt="" />
-          <h2 className="text-2xl text-slate-900 font-bold">AI Writing Pro</h2>
+          <img src={product.icon} alt={product.name} />
+          <h2 className="text-2xl text-slate-900 font-bold">{product.name}</h2>
           <p className="text-[16px] leading-8 text-slate-500">
-            Generate high-quality content, blogs, and marketing copy in seconds
-            with advanced AI.
+            {product.description}
           </p>
           <p className="text-[16px] text-slate-500 capitalize">
-            <span className="text-2xl font-bold text-slate-900">$29</span>/mo
+            <span className="text-2xl font-bold text-slate-900">
+              ${product.price}
+            </span>
+            /{product.period}
           </p>
           <ul className="space-y-1">
-            <li>
-              <span className="flex gap-2 items-center font-medium text-[16px] text-slate-600">
-                <FaCheck className="text-green-400" /> Unlimited AI generations
-              </span>
-            </li>
-            <li>
-              <span className="flex gap-2 items-center font-medium text-[16px] text-slate-600">
-                <FaCheck className="text-green-400" /> Unlimited AI generations
-              </span>
-            </li>
-            <li>
-              <span className="flex gap-2 items-center font-medium text-[16px] text-slate-600">
-                <FaCheck className="text-green-400" /> Unlimited AI generations
-              </span>
-            </li>
+            {product.features.map((feature, index) => {
+              return <MyProductFeatureListItem feature={feature} key={index} />;
+            })}
           </ul>
           <button className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white w-full rounded-full font-bold text-[16px]">
             Buy Now
