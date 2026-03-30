@@ -1,11 +1,12 @@
 import React from "react";
 import { CiPlay1 } from "react-icons/ci";
 import statusImg from "../../assets/status.png";
+import bannerImg from "../../assets/banner.png";
 
 const Banner = () => {
   return (
-    <div>
-      <div className="container mx-auto">
+    <div className="container mx-auto">
+      <div className="grid grid-cols-2 gap-5 ">
         <div>
           <div className="badge bg-[#E1E7FF] flex items-center rounded-full py-4">
             <img src={statusImg} alt="" />
@@ -36,7 +37,9 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <div></div>
+        <div className="flex justify-center items-center">
+          <img src={bannerImg} alt="Banner Image" />
+        </div>
       </div>
     </div>
   );
