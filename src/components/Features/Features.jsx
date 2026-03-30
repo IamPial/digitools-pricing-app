@@ -3,7 +3,6 @@ import { useState } from "react";
 import Products from "./products/products";
 
 const Features = ({ fetchPromise }) => {
-  console.log(fetchPromise);
   const [toggleBtn, setToggleBtn] = useState("products");
   return (
     <div>
