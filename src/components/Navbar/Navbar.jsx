@@ -1,12 +1,15 @@
 import React from "react";
 import logoImg from "../../assets/logo.png";
 import cartImg from "../../assets/shopping-cart.png";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [toggleBtn, setToggleBtn] = useState("login");
+
   return (
     <div className="bg-base-100 shadow-sm py-3">
       <div className="navbar container mx-auto  ">
-        <div className="navbar-start">
+        <div className="navbar-start gap-2 lg:gap-0">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -47,7 +50,11 @@ const Navbar = () => {
             </ul>
           </div>
           <a>
-            <img src={logoImg} alt="digiTools" />
+            <img
+              className="w-26 md:w-36 lg:w-full"
+              src={logoImg}
+              alt="digiTools"
+            />
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -76,12 +83,19 @@ const Navbar = () => {
             </span>
             <img className="" src={cartImg} alt="cart" />
           </div>
-          <button className="btn rounded-full bg-white text-neutral-900 hover:bg-linear-to-r from-[#4f39f6] to-[#9514fa] border-none hover:text-white font-semibold text-[16px]">
+
+          <button
+            onClick={() => setToggleBtn("login")}
+            className={`btn rounded-full ${toggleBtn === "login" ? "bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white" : "bg-white text-neutral-900"} border-none font-semibold text-[16px]`}
+          >
             Login
           </button>
-          <a className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-full border-none text-white font-semibold text-[16px]">
+          <button
+            onClick={() => setToggleBtn("started")}
+            className={`btn ${toggleBtn === "started" ? "bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white" : "bg-white text-slate-900"}  rounded-full border-none font-semibold text-[16px`}
+          >
             Get Started
-          </a>
+          </button>
         </div>
       </div>
     </div>
