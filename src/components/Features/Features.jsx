@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Products from "./products/products";
+import MyProducts from "./MyProducts/MyProducts";
 
 const Features = ({ fetchPromise }) => {
   const [toggleBtn, setToggleBtn] = useState("products");
@@ -31,7 +31,7 @@ const Features = ({ fetchPromise }) => {
           </div>
         </div>
 
-        <Products fetchPromise={fetchPromise} />
+        <MyProducts fetchPromise={fetchPromise} />
       </div>
     </div>
   );
