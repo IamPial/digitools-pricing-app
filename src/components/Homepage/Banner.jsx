@@ -32,11 +32,20 @@ const Banner = () => {
             >
               Explore Products
             </button>
-            <div className="bg-linear-to-r border from-[#4f39f6] to-[#9514fa] bg-clip-border border-transparent inline-block rounded-full">
-              <button className="btn rounded-full p-6 bg-white">
+            <div
+              className={`${toggleBtn === "watch" ? "border-none" : "bg-linear-to-r border from-[#4f39f6] to-[#9514fa] bg-clip-border border-transparent"}  inline-block rounded-full`}
+            >
+              <button
+                onClick={() => setToggleBtn("watch")}
+                className={`btn rounded-full p-6 ${toggleBtn === "watch" ? "bg-linear-to-r from-[#4f39f6] to-[#9514fa]" : "bg-white"} bg-white`}
+              >
                 {" "}
-                <CiPlay1 className="text-purple-800 text-xl " />
-                <span className="font-medium text-[16px] bg-linear-to-r from-[#4f39f6]  to-[#9514fa]  bg-clip-text text-transparent">
+                <CiPlay1
+                  className={`${toggleBtn === "watch" ? "text-white" : "text-purple-800"}  text-xl`}
+                />
+                <span
+                  className={`font-medium text-[16px] ${toggleBtn === "watch" ? " text-white " : "bg-linear-to-r from-[#4f39f6]  to-[#9514fa]  bg-clip-text text-transparent"} `}
+                >
                   Watch Demo
                 </span>
               </button>
