@@ -5,8 +5,8 @@ import bannerImg from "../../assets/banner.png";
 
 const Banner = () => {
   return (
-    <div className="container mx-auto">
-      <div className="grid grid-cols-2 gap-2  items-center">
+    <div className="container mx-auto py-20">
+      <div className="grid grid-cols-2 gap-2 items-center">
         <div className="space-y-5">
           <div className="badge bg-[#E1E7FF] flex items-center rounded-full py-4">
             <img src={statusImg} alt="" />
@@ -23,7 +23,7 @@ const Banner = () => {
             software—all in one place. Start creating faster today. <br />{" "}
             Explore Products
           </p>
-          <div>
+          <div className="flex gap-4">
             <button className="btn rounded-full p-6 text-white text-[16px] font-bold bg-linear-to-r from-[#4f39f6] to-[#9514fa]">
               Explore Products
             </button>
@@ -38,7 +38,7 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-end items-center">
           <img src={bannerImg} alt="Banner Image" />
         </div>
       </div>
