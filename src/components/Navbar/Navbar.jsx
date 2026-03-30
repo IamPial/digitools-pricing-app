@@ -4,7 +4,7 @@ import cartImg from "../../assets/shopping-cart.png";
 import { useState } from "react";
 
 const Navbar = () => {
-  const [toggleBtn, setToggleBtn] = useState("login");
+  const [toggleBtn, setToggleBtn] = useState("started");
 
   return (
     <div className="bg-base-100 shadow-sm py-3">
