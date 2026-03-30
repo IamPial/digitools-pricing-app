@@ -4,8 +4,8 @@ import cartImg from "../../assets/shopping-cart.png";
 
 const Navbar = () => {
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm">
+    <div className="bg-base-100 shadow-sm py-3">
+      <div className="navbar container mx-auto  ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,7 +27,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow font-semibold text-slate-900 text-[16px]"
             >
               <li>
                 <a href="">Products</a>
@@ -51,7 +51,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 font-semibold text-slate-900 text-[16px]">
             <li>
               <a href="">Products</a>
             </li>
@@ -76,10 +76,10 @@ const Navbar = () => {
             </span>
             <img className="" src={cartImg} alt="cart" />
           </div>
-          <button className="btn rounded-full bg-white text-neutral-900 hover:bg-linear-to-r from-[#4f39f6] to-[#9514fa] border-none hover:text-white font-semibold">
+          <button className="btn rounded-full bg-white text-neutral-900 hover:bg-linear-to-r from-[#4f39f6] to-[#9514fa] border-none hover:text-white font-semibold text-[16px]">
             Login
           </button>
-          <a className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-full border-none text-white font-semibold">
+          <a className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] rounded-full border-none text-white font-semibold text-[16px]">
             Get Started
           </a>
         </div>
