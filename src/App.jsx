@@ -9,7 +9,6 @@ const fetchData = async () => {
   return res.json();
 };
 const fetchPromise = fetchData();
-
 const App = () => {
   return (
     <div>
