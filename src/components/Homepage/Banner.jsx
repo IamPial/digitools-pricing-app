@@ -6,7 +6,7 @@ import bannerImg from "../../assets/banner.png";
 const Banner = () => {
   return (
     <div className="container mx-auto py-20">
-      <div className="grid grid-cols-2 gap-2 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 p-2 lg:p-0  gap-10 lg:gap-2  items-center">
         <div className="space-y-5">
           <div className="badge bg-[#E1E7FF] flex items-center rounded-full py-4">
             <img src={statusImg} alt="" />
@@ -38,7 +38,7 @@ const Banner = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-end items-center">
+        <div className="flex justify-center lg:justify-end items-center">
           <img src={bannerImg} alt="Banner Image" />
         </div>
       </div>
