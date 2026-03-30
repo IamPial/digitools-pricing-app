@@ -31,7 +31,12 @@ const Features = ({ fetchPromise }) => {
           </div>
         </div>
 
-        <MyProducts fetchPromise={fetchPromise} />
+        {/* <MyProducts fetchPromise={fetchPromise} /> */}
+        {toggleBtn === "products" ? (
+          <MyProducts fetchPromise={fetchPromise} />
+        ) : (
+          "nll"
+        )}
       </div>
     </div>
   );
