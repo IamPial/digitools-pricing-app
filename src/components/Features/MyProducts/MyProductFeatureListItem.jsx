@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { FaCheck } from "react-icons/fa6";
 const MyProductFeatureListItem = ({ index, feature }) => {
   return (
@@ -8,6 +9,11 @@ const MyProductFeatureListItem = ({ index, feature }) => {
       </span>
     </li>
   );
+};
+
+MyProductFeatureListItem.propTypes = {
+  index: PropTypes.number,
+  features: PropTypes.array,
 };
 
 export default MyProductFeatureListItem;
