@@ -1,30 +1,12 @@
 import React from "react";
 import { FaCheck } from "react-icons/fa6";
-// {
-//     "id": 3,
-//     "plan": "Enterprise",
-//     "tagline": "For teams and businesses",
-//     "price": 99,
-//     "currency": "USD",
-//     "period": "monthly",
-//     "is_popular": false,
-//     "features": [
-//       "Everything in Pro",
-//       "Team collaboration",
-//       "Custom integrations",
-//       "Dedicated support",
-//       "SLA guarantee",
-//       "Custom branding"
-//     ],
-//     "label": "Contact Sales"
-//   }
 
 const PricingCard = ({ pricingList }) => {
   return (
     <div>
       {pricingList.isPopular === true ? (
         <div className=" relative -z-1 select-none border bg-linear-to-r from-[#4f39f6] to-[#9514fa] border-gray-200 rounded-xl p-6">
-          <span className=" absolute  -top-4 left-36 p-4 badge bg-[#FEF3C6] border-none text-[#BB4D00] font-medium rounded-full">
+          <span className=" absolute  -top-4 left-40  sm:left-60 md:left-26 xl:left-36 p-4 badge bg-[#FEF3C6] border-none text-[#BB4D00] font-medium rounded-full">
             {pricingList.tag}
           </span>
           <div className="h-94">
