@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, use } from "react";
+import PropTypes from "prop-types";
 import MyProducts from "./MyProducts/MyProducts";
 import Carts from "./Carts/Carts";
 
@@ -46,6 +47,11 @@ const Features = ({ fetchPromise }) => {
       </div>
     </div>
   );
+};
+
+Features.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleBuyButton: PropTypes.func.isRequired,
 };
 
 export default Features;
