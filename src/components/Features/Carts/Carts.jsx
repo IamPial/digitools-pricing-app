@@ -5,7 +5,8 @@ import cartImg from "../../../assets/shopping-cart-img.png";
 
 const Carts = ({ buyItem, setBuyItem }) => {
   const handleDelete = (obj) => {
-    console.log(obj);
+    const filteredItem = buyItem.filter((p) => p.id !== obj);
+    setBuyItem([...filteredItem]);
   };
   return (
     <div className="pt-10 max-w-180 mx-auto">
@@ -53,6 +54,7 @@ const Carts = ({ buyItem, setBuyItem }) => {
 
 Carts.propTypes = {
   buyItem: PropTypes.array.isRequired,
+  handleDelete: PropTypes.func.isRequired,
 };
 
 export default Carts;
