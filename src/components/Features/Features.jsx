@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import MyProducts from "./MyProducts/MyProducts";
 import Carts from "./Carts/Carts";
 
-const Features = ({ fetchPromise }) => {
+const Features = ({ fetchPromise, count, setCount }) => {
   const data = use(fetchPromise);
   const [toggleBtn, setToggleBtn] = useState("products");
   const [buyItem, setBuyItem] = useState([]);
@@ -32,7 +32,7 @@ const Features = ({ fetchPromise }) => {
               onClick={() => setToggleBtn("carts")}
               className={`btn ${toggleBtn === "carts" ? " bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white" : "bg-white text-[#25065D] border-none"} rounded-full p-6 font-bold text-[16px]`}
             >
-              Cart (12)
+              Cart ({count})
             </button>
           </div>
         </div>
@@ -44,6 +44,8 @@ const Features = ({ fetchPromise }) => {
             setAmount={setAmount}
             buyItem={buyItem}
             setBuyItem={setBuyItem}
+            count={count}
+            setCount={setCount}
           />
         ) : (
           <Carts
@@ -51,6 +53,8 @@ const Features = ({ fetchPromise }) => {
             setBuyItem={setBuyItem}
             amount={amount}
             setAmount={setAmount}
+            count={count}
+            setCount={setCount}
           />
         )}
       </div>
