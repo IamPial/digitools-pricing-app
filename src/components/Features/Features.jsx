@@ -8,6 +8,7 @@ const Features = ({ fetchPromise }) => {
   const data = use(fetchPromise);
   const [toggleBtn, setToggleBtn] = useState("products");
   const [buyItem, setBuyItem] = useState([]);
+  const [amount, setAmount] = useState(0);
 
   return (
     <div>
@@ -37,9 +38,20 @@ const Features = ({ fetchPromise }) => {
         </div>
 
         {toggleBtn === "products" ? (
-          <MyProducts data={data} buyItem={buyItem} setBuyItem={setBuyItem} />
+          <MyProducts
+            data={data}
+            amount={amount}
+            setAmount={setAmount}
+            buyItem={buyItem}
+            setBuyItem={setBuyItem}
+          />
         ) : (
-          <Carts buyItem={buyItem} setBuyItem={setBuyItem} />
+          <Carts
+            buyItem={buyItem}
+            setBuyItem={setBuyItem}
+            amount={amount}
+            setAmount={setAmount}
+          />
         )}
       </div>
     </div>
@@ -50,6 +62,8 @@ Features.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
   buyItem: PropTypes.array.isRequired,
   setBuyItem: PropTypes.array.isRequired,
+  amount: PropTypes.number.isRequired,
+  setAmount: PropTypes.number.isRequired,
 };
 
 export default Features;
