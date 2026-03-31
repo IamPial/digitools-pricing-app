@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Banner from "./components/Homepage/Banner";
 import Counter from "./components/Homepage/Counter";
@@ -10,12 +10,13 @@ const fetchData = async () => {
 };
 const fetchPromise = fetchData();
 const App = () => {
+  const [count, setCount] = useState(0);
   return (
     <div>
-      <Navbar />
+      <Navbar count={count} />
       <Banner />
       <Counter />
-      <Features fetchPromise={fetchPromise} />
+      <Features fetchPromise={fetchPromise} count={count} setCount={setCount} />
     </div>
   );
 };
