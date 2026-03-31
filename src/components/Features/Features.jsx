@@ -7,11 +7,8 @@ import Carts from "./Carts/Carts";
 const Features = ({ fetchPromise }) => {
   const data = use(fetchPromise);
   const [toggleBtn, setToggleBtn] = useState("products");
+  const [buyItem, setBuyItem] = useState([]);
 
-  // console.log(data);
-  const handleBuyButton = (productInfo) => {
-    console.log(productInfo);
-  };
   return (
     <div>
       <div className="container mx-auto py-30">
@@ -40,9 +37,9 @@ const Features = ({ fetchPromise }) => {
         </div>
 
         {toggleBtn === "products" ? (
-          <MyProducts data={data} handleBuyButton={handleBuyButton} />
+          <MyProducts data={data} buyItem={buyItem} setBuyItem={setBuyItem} />
         ) : (
-          <Carts data={data} />
+          <Carts buyItem={buyItem} setBuyItem={setBuyItem} />
         )}
       </div>
     </div>
@@ -51,7 +48,8 @@ const Features = ({ fetchPromise }) => {
 
 Features.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
-  handleBuyButton: PropTypes.func.isRequired,
+  buyItem: PropTypes.array.isRequired,
+  setBuyItem: PropTypes.array.isRequired,
 };
 
 export default Features;
