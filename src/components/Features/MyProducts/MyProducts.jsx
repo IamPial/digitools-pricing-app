@@ -2,14 +2,20 @@ import React from "react";
 
 import MyProductCard from "./MyProductCard";
 
-const MyProducts = ({ data }) => {
+const MyProducts = ({ data, handleBuyButton }) => {
   // const productData = use(fetchPromise);
 
   return (
     <div>
       <div className=" grid grid-cols-1  px-4 md:px-0 md:grid-cols-2 lg:grid-cols-3 gap-7 pt-10">
         {data.map((product) => {
-          return <MyProductCard product={product} key={product.id} />;
+          return (
+            <MyProductCard
+              product={product}
+              key={product.id}
+              handleBuyButton={handleBuyButton}
+            />
+          );
         })}
       </div>
     </div>
