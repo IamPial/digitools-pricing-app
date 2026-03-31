@@ -20,7 +20,7 @@ const Carts = ({ buyItem, setBuyItem, amount, setAmount, count, setCount }) => {
   };
 
   return (
-    <div className="pt-10 max-w-180 mx-auto">
+    <div className="pt-10 max-w-180 mx-auto px-1 lg:px-0">
       <div className=" border border-gray-200 rounded-xl p-10">
         <h2 className="text-2xl font-bold text-slate-900 mb-4">Your Cart</h2>
         <div className="space-y-4">
