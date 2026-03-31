@@ -78,9 +78,13 @@ const Navbar = ({ count }) => {
         </div>
         <div className="navbar-end gap-3">
           <div className="indicator">
-            <span className="indicator-item badge p-2 h-4 w-4 badge-secondary rounded-full text-[10px] ">
-              {count}
-            </span>
+            {count === 0 ? (
+              " "
+            ) : (
+              <span className="indicator-item badge p-2 h-4 w-4 badge-secondary rounded-full text-[10px] ">
+                {count}
+              </span>
+            )}
             <img className="" src={cartImg} alt="cart" />
           </div>
 
