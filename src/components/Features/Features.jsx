@@ -1,10 +1,15 @@
 import React from "react";
-import { useState } from "react";
+import { useState, use } from "react";
 import MyProducts from "./MyProducts/MyProducts";
 import Carts from "./Carts/Carts";
 
 const Features = ({ fetchPromise }) => {
+  const data = use(fetchPromise);
   const [toggleBtn, setToggleBtn] = useState("products");
+
+  // const handleBuyButton = () => {
+  //   console.log();
+  // };
   return (
     <div>
       <div className="container mx-auto py-30">
@@ -33,9 +38,9 @@ const Features = ({ fetchPromise }) => {
         </div>
 
         {toggleBtn === "products" ? (
-          <MyProducts fetchPromise={fetchPromise} />
+          <MyProducts data={data} />
         ) : (
-          <Carts fetchPromise={fetchPromise} />
+          <Carts data={data} />
         )}
       </div>
     </div>
