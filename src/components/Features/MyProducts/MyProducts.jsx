@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import MyProductCard from "./MyProductCard";
 
-const MyProducts = ({ data, handleBuyButton }) => {
+const MyProducts = ({ data, buyItem, setBuyItem }) => {
   return (
     <div>
       <div className=" grid grid-cols-1  px-4 md:px-0 md:grid-cols-2 lg:grid-cols-3 gap-7 pt-10">
@@ -12,7 +12,8 @@ const MyProducts = ({ data, handleBuyButton }) => {
             <MyProductCard
               product={product}
               key={product.id}
-              handleBuyButton={handleBuyButton}
+              buyItem={buyItem}
+              setBuyItem={setBuyItem}
             />
           );
         })}
@@ -23,7 +24,9 @@ const MyProducts = ({ data, handleBuyButton }) => {
 
 MyProducts.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
-  handleBuyButton: PropTypes.func.isRequired,
+  product: PropTypes.object.isRequired,
+  buyItem: PropTypes.array.isRequired,
+  setBuyItem: PropTypes.array.isRequired,
 };
 
 export default MyProducts;
