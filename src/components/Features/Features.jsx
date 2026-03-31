@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import MyProducts from "./MyProducts/MyProducts";
-import Carts from "./Carts/carts";
+import Carts from "./Carts/Carts";
 
 const Features = ({ fetchPromise }) => {
   const [toggleBtn, setToggleBtn] = useState("products");
@@ -32,11 +32,10 @@ const Features = ({ fetchPromise }) => {
           </div>
         </div>
 
-        {/* <MyProducts fetchPromise={fetchPromise} /> */}
         {toggleBtn === "products" ? (
           <MyProducts fetchPromise={fetchPromise} />
         ) : (
-          <Carts />
+          <Carts fetchPromise={fetchPromise} />
         )}
       </div>
     </div>
