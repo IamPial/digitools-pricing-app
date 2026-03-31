@@ -13,7 +13,7 @@ const MyProductFeatureListItem = ({ index, feature }) => {
 
 MyProductFeatureListItem.propTypes = {
   index: PropTypes.number,
-  features: PropTypes.array,
+  features: PropTypes.array.isRequired,
 };
 
 export default MyProductFeatureListItem;

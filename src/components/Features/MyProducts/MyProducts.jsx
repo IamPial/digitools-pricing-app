@@ -22,8 +22,8 @@ const MyProducts = ({ data, handleBuyButton }) => {
 };
 
 MyProducts.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object),
-  handleBuyButton: PropTypes.func,
+  data: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleBuyButton: PropTypes.func.isRequired,
 };
 
 export default MyProducts;

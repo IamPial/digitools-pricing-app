@@ -42,8 +42,8 @@ const MyProductCard = ({ product, handleBuyButton }) => {
 };
 
 MyProductCard.propTypes = {
-  product: PropTypes.object,
-  handleBuyButton: PropTypes.func,
+  product: PropTypes.object.isRequired,
+  handleBuyButton: PropTypes.func.isRequired,
 };
 
 export default MyProductCard;
