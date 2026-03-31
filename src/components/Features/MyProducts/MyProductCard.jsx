@@ -6,7 +6,6 @@ import MyProductBadge from "./MyProductBadge";
 const MyProductCard = ({ product, buyItem, setBuyItem }) => {
   const handleBuyItem = () => {
     setBuyItem([...buyItem, product]);
-    console.log([...buyItem]);
   };
 
   return (
@@ -49,6 +48,8 @@ const MyProductCard = ({ product, buyItem, setBuyItem }) => {
 MyProductCard.propTypes = {
   product: PropTypes.object.isRequired,
   handleBuyButton: PropTypes.func.isRequired,
+  buyItem: PropTypes.array.isRequired,
+  setBuyItem: PropTypes.array.isRequired,
 };
 
 export default MyProductCard;
