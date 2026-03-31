@@ -1,20 +1,17 @@
 import React from "react";
-import { use } from "react";
 
-const Carts = ({ fetchPromise }) => {
-  const cartData = use(fetchPromise);
-  console.log(cartData);
+const Carts = ({ data }) => {
   return (
     <div className="pt-10 max-w-180 mx-auto">
-      <div className=" border rounded-xl p-10">
+      <div className=" border border-gray-200 rounded-xl p-10">
         <h2 className="text-2xl font-bold text-slate-900 mb-4">Your Cart</h2>
         <div className="space-y-4">
-          {cartData.map((cart) => {
+          {data.map((cart) => {
             return (
               <div key={cart.id} className="flex gap-4 flex-col">
-                <div className="flex  items-center justify-between  border p-4">
+                <div className="flex  items-center justify-between   p-4">
                   <div className="flex gap-4 items-center">
-                    <div className="w-12 h-12 rounded-full border ">
+                    <div className="w-12 h-12 rounded-full border border-gray-200 ">
                       <img
                         className="block mx-auto mt-2"
                         src={cart.icon}
