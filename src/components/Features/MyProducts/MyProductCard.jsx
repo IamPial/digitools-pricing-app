@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import MyProductFeatureListItem from "./MyProductFeatureListItem";
 import MyProductBadge from "./MyProductBadge";
 
-const MyProductCard = ({ product, buyItem, setBuyItem, amount, setAmount }) => {
+const MyProductCard = ({
+  product,
+  buyItem,
+  setBuyItem,
+  amount,
+  setAmount,
+  count,
+  setCount,
+}) => {
+  const [clicked, setClicked] = useState(false);
   const handleBuyItem = () => {
-    setBuyItem([...buyItem, product]);
+    const filterItem = buyItem.filter((p) => p.id !== product.id);
+    setBuyItem([...filterItem, product]);
     setAmount(amount + product.price);
+    setCount(count + 1);
+    setClicked(true);
   };
 
   return (
@@ -36,9 +48,10 @@ const MyProductCard = ({ product, buyItem, setBuyItem, amount, setAmount }) => {
         <div className="p-6 ">
           <button
             onClick={handleBuyItem}
-            className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white w-full rounded-full font-bold text-[16px] "
+            disabled={clicked === true ? true : false}
+            className={`btn ${clicked === true ? "bg-green-500" : "bg-linear-to-r from-[#4f39f6] to-[#9514fa]"}  text-white w-full rounded-full font-bold text-[16px] `}
           >
-            Buy Now
+            {clicked === true ? "Added to cart" : " Buy Now"}
           </button>
         </div>
       </div>
