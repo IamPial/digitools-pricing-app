@@ -5,7 +5,6 @@ import PricingCard from "../ui/PricingCard";
 
 const Pricing = ({ pricingPromise }) => {
   const pricingData = use(pricingPromise);
-  console.log(pricingData);
   return (
     <div>
       <div className="container mx-auto py-30">
