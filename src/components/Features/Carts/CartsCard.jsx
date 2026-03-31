@@ -24,7 +24,7 @@ const CartsCard = ({ cart, handleDelete }) => {
             </div>
           </div>
           <button
-            onClick={() => handleDelete(cart.id)}
+            onClick={() => handleDelete(cart)}
             className="btn btn-error btn-soft"
           >
             Remove
