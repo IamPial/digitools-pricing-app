@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { toast } from "react-toastify";
 import CartsCard from "./CartsCard";
 import cartImg from "../../../assets/shopping-cart-img.png";
 
@@ -11,12 +12,14 @@ const Carts = ({ buyItem, setBuyItem, amount, setAmount, count, setCount }) => {
     const filteredItem = buyItem.filter((p) => p.id !== cart.id);
     setBuyItem(filteredItem);
     setAmount(amount - cart.price);
+    toast.success(`${cart.name} deleted`);
   };
 
   const handlePayment = () => {
     setBuyItem([]);
     setAmount(0);
     setCount(0);
+    toast.success("Payment Successful");
   };
 
   return (

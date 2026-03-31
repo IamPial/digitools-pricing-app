@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { toast } from "react-toastify";
 import MyProductFeatureListItem from "./MyProductFeatureListItem";
 import MyProductBadge from "./MyProductBadge";
 
@@ -19,6 +20,7 @@ const MyProductCard = ({
     setAmount(amount + product.price);
     setCount(count + 1);
     setClicked(true);
+    toast.success(`${product.name} added to cart`);
   };
 
   return (
