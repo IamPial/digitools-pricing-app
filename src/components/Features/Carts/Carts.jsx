@@ -12,6 +12,13 @@ const Carts = ({ buyItem, setBuyItem, amount, setAmount, count, setCount }) => {
     setBuyItem(filteredItem);
     setAmount(amount - cart.price);
   };
+
+  const handlePayment = () => {
+    setBuyItem([]);
+    setAmount(0);
+    setCount(0);
+  };
+
   return (
     <div className="pt-10 max-w-180 mx-auto">
       <div className=" border border-gray-200 rounded-xl p-10">
@@ -47,7 +54,10 @@ const Carts = ({ buyItem, setBuyItem, amount, setAmount, count, setCount }) => {
                   $ {amount}
                 </span>
               </div>
-              <button className="w-full rounded-full text-[16px] text-white btn bg-linear-to-r from-[#4f39f9] to-[#9514fa]">
+              <button
+                onClick={handlePayment}
+                className="w-full rounded-full text-[16px] text-white btn bg-linear-to-r from-[#4f39f9] to-[#9514fa]"
+              >
                 Proceed to Checkout
               </button>
             </div>
