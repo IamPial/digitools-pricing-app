@@ -6,6 +6,7 @@ import Features from "./components/Features/Features";
 import GetStarted from "./components/Homepage/GetStarted";
 import Pricing from "./components/Homepage/Pricing";
 import WorkFlow from "./components/Homepage/WorkFlow";
+import Footer from "./components/Homepage/Footer";
 
 //for product list and cart list
 const fetchData = async () => {
@@ -31,6 +32,7 @@ const App = () => {
       <GetStarted />
       <Pricing pricingPromise={pricingPromise} />
       <WorkFlow />
+      <Footer />
     </div>
   );
 };
