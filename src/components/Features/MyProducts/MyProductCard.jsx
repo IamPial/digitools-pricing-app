@@ -3,7 +3,12 @@ import PropTypes from "prop-types";
 import MyProductFeatureListItem from "./MyProductFeatureListItem";
 import MyProductBadge from "./MyProductBadge";
 
-const MyProductCard = ({ product, handleBuyButton }) => {
+const MyProductCard = ({ product, buyItem, setBuyItem }) => {
+  const handleBuyItem = () => {
+    setBuyItem([...buyItem, product]);
+    console.log([...buyItem]);
+  };
+
   return (
     <div>
       <div className="border border-gray-200 rounded-lg ">
@@ -30,7 +35,7 @@ const MyProductCard = ({ product, handleBuyButton }) => {
         </div>
         <div className="p-6 ">
           <button
-            onClick={() => handleBuyButton(product)}
+            onClick={handleBuyItem}
             className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white w-full rounded-full font-bold text-[16px] "
           >
             Buy Now
