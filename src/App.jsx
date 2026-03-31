@@ -4,6 +4,7 @@ import Banner from "./components/Homepage/Banner";
 import Counter from "./components/Homepage/Counter";
 import Features from "./components/Features/Features";
 import GetStarted from "./components/Homepage/GetStarted";
+import Pricing from "./components/Homepage/Pricing";
 
 const fetchData = async () => {
   const res = await fetch("/products.json");
@@ -19,6 +20,7 @@ const App = () => {
       <Counter />
       <Features fetchPromise={fetchPromise} count={count} setCount={setCount} />
       <GetStarted />
+      <Pricing />
     </div>
   );
 };
