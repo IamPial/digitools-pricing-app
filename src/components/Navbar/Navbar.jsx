@@ -3,11 +3,11 @@ import logoImg from "../../assets/logo.png";
 import cartImg from "../../assets/shopping-cart.png";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ count }) => {
   const [toggleBtn, setToggleBtn] = useState("started");
 
   return (
-    <div className="bg-base-100 shadow-sm py-3">
+    <div className="bg-base-100 shadow-sm py-3 sticky top-0 ">
       <div className="navbar container mx-auto  ">
         <div className="navbar-start gap-2 lg:gap-0">
           <div className="dropdown">
@@ -79,7 +79,7 @@ const Navbar = () => {
         <div className="navbar-end gap-3">
           <div className="indicator">
             <span className="indicator-item badge p-2 h-4 w-4 badge-secondary rounded-full text-[10px] ">
-              12
+              {count}
             </span>
             <img className="" src={cartImg} alt="cart" />
           </div>
