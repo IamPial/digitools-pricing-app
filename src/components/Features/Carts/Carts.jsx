@@ -3,8 +3,11 @@ import PropTypes from "prop-types";
 import CartsCard from "./CartsCard";
 import cartImg from "../../../assets/shopping-cart-img.png";
 
-const Carts = ({ buyItem, setBuyItem, amount, setAmount }) => {
+const Carts = ({ buyItem, setBuyItem, amount, setAmount, count, setCount }) => {
   const handleDelete = (cart) => {
+    if (count > 0) {
+      setCount(count - 1);
+    }
     const filteredItem = buyItem.filter((p) => p.id !== cart.id);
     setBuyItem(filteredItem);
     setAmount(amount - cart.price);
