@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 import MyProductFeatureListItem from "./MyProductFeatureListItem";
 import MyProductBadge from "./MyProductBadge";
 
@@ -35,11 +35,15 @@ const MyProductCard = ({ product, handleBuyButton }) => {
           >
             Buy Now
           </button>
-          {/* TODO: working with buy now button */}
         </div>
       </div>
     </div>
   );
+};
+
+MyProductCard.propTypes = {
+  product: PropTypes.object,
+  handleBuyButton: PropTypes.func,
 };
 
 export default MyProductCard;
