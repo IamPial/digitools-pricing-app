@@ -3,11 +3,11 @@ import React from "react";
 const WorkFlow = () => {
   return (
     <div className="py-30 bg-linear-to-r from-[#4f39f6] to-[#9514fa]">
-      <div className="flex flex-col items-center">
-        <h2 className="text-[40px] font-extrabold text-white">
+      <div className="flex flex-col items-center ">
+        <h2 className="text-4xl md:text-[40px] font-extrabold text-center text-white">
           Ready to Transform Your Workflow?
         </h2>
-        <p className="text-[16px] text-white mt-4 leading-6 text-center ">
+        <p className="text-sm md:text-[16px] text-white mt-4 leading-6 text-center ">
           Join thousands of professionals who are already using Digitools to
           work smarter. <br /> Start your free trial today.
         </p>
