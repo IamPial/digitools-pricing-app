@@ -1,10 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import MyProductCard from "./MyProductCard";
 
 const MyProducts = ({ data, handleBuyButton }) => {
-  // const productData = use(fetchPromise);
-
   return (
     <div>
       <div className=" grid grid-cols-1  px-4 md:px-0 md:grid-cols-2 lg:grid-cols-3 gap-7 pt-10">
@@ -20,6 +19,11 @@ const MyProducts = ({ data, handleBuyButton }) => {
       </div>
     </div>
   );
+};
+
+MyProducts.propTypes = {
+  data: PropTypes.arrayOf(PropTypes.object),
+  handleBuyButton: PropTypes.func,
 };
 
 export default MyProducts;
