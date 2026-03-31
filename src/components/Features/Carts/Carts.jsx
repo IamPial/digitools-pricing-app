@@ -3,10 +3,11 @@ import PropTypes from "prop-types";
 import CartsCard from "./CartsCard";
 import cartImg from "../../../assets/shopping-cart-img.png";
 
-const Carts = ({ buyItem, setBuyItem }) => {
-  const handleDelete = (obj) => {
-    const filteredItem = buyItem.filter((p) => p.id !== obj);
-    setBuyItem([...filteredItem]);
+const Carts = ({ buyItem, setBuyItem, amount, setAmount }) => {
+  const handleDelete = (cart) => {
+    const filteredItem = buyItem.filter((p) => p.id !== cart.id);
+    setBuyItem(filteredItem);
+    setAmount(amount - cart.price);
   };
   return (
     <div className="pt-10 max-w-180 mx-auto">
@@ -36,10 +37,12 @@ const Carts = ({ buyItem, setBuyItem }) => {
           {buyItem.length === 0 ? (
             ""
           ) : (
-            <div>
+            <div className="space-y-4">
               <div className="flex justify-between items-center">
                 <span className="text-[16px] text-slate-500">Total:</span>
-                <span className="text-2xl font-bold text-slate-900">$70</span>
+                <span className="text-2xl font-bold text-slate-900">
+                  $ {amount}
+                </span>
               </div>
               <button className="w-full rounded-full text-[16px] text-white btn bg-linear-to-r from-[#4f39f9] to-[#9514fa]">
                 Proceed to Checkout
@@ -54,6 +57,9 @@ const Carts = ({ buyItem, setBuyItem }) => {
 
 Carts.propTypes = {
   buyItem: PropTypes.array.isRequired,
+  setBuyItem: PropTypes.array.isRequired,
+  amount: PropTypes.number.isRequired,
+  setAmount: PropTypes.number.isRequired,
   handleDelete: PropTypes.func.isRequired,
 };
 
