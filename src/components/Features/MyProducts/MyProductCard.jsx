@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import MyProductFeatureListItem from "./MyProductFeatureListItem";
 import MyProductBadge from "./MyProductBadge";
 
-const MyProductCard = ({ product, buyItem, setBuyItem }) => {
+const MyProductCard = ({ product, buyItem, setBuyItem, amount, setAmount }) => {
   const handleBuyItem = () => {
     setBuyItem([...buyItem, product]);
+    setAmount(amount + product.price);
   };
 
   return (
@@ -50,6 +51,8 @@ MyProductCard.propTypes = {
   handleBuyButton: PropTypes.func.isRequired,
   buyItem: PropTypes.array.isRequired,
   setBuyItem: PropTypes.array.isRequired,
+  amount: PropTypes.number.isRequired,
+  setAmount: PropTypes.number.isRequired,
 };
 
 export default MyProductCard;
