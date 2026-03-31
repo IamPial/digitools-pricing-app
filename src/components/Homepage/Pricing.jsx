@@ -15,8 +15,8 @@ const Pricing = () => {
         </div>
 
         <div className="mt-10 grid grid-cols-3 gap-7">
-          <div className="border border-gray-200 rounded-xl p-6">
-            <div className="h-86">
+          <div className="select-none border border-gray-200 rounded-xl p-6">
+            <div className="h-94">
               <h2 className="text-2xl font-bold text-slate-900">Starter</h2>
               <p className="text-[16px] text-slate-600">
                 Perfect for getting started
@@ -41,12 +41,16 @@ const Pricing = () => {
               </ul>
             </div>
             <div className="">
-              <button className="btn w-full bg-purple-500 text-white rounded-full ">
+              <button className="btn w-full bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white shadow-none rounded-full ">
                 Get Started Free
               </button>
             </div>
           </div>
-          <div className="select-none border bg-linear-to-r from-[#4f39f6] to-[#9514fa] border-gray-200 rounded-xl p-6">
+
+          <div className=" relative -z-1 select-none border bg-linear-to-r from-[#4f39f6] to-[#9514fa] border-gray-200 rounded-xl p-6">
+            <span className=" absolute  -top-4 left-40 p-4 badge bg-[#FEF3C6] border-none text-[#BB4D00] font-medium rounded-full">
+              Hello me
+            </span>
             <div className="h-94">
               <h2 className="text-2xl font-bold text-white">Starter</h2>
               <p className="text-[16px] text-gray-300">
