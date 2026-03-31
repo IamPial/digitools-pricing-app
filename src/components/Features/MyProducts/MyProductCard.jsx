@@ -3,7 +3,7 @@ import React from "react";
 import MyProductFeatureListItem from "./MyProductFeatureListItem";
 import MyProductBadge from "./MyProductBadge";
 
-const MyProductCard = ({ product }) => {
+const MyProductCard = ({ product, handleBuyButton }) => {
   return (
     <div>
       <div className="border border-gray-200 rounded-lg ">
@@ -29,9 +29,13 @@ const MyProductCard = ({ product }) => {
           </ul>
         </div>
         <div className="p-6 ">
-          <button className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white w-full rounded-full font-bold text-[16px] ">
+          <button
+            onClick={() => handleBuyButton(product)}
+            className="btn bg-linear-to-r from-[#4f39f6] to-[#9514fa] text-white w-full rounded-full font-bold text-[16px] "
+          >
             Buy Now
           </button>
+          {/* TODO: working with buy now button */}
         </div>
       </div>
     </div>
