@@ -5,6 +5,7 @@ import Counter from "./components/Homepage/Counter";
 import Features from "./components/Features/Features";
 import GetStarted from "./components/Homepage/GetStarted";
 import Pricing from "./components/Homepage/Pricing";
+import WorkFlow from "./components/Homepage/WorkFlow";
 
 //for product list and cart list
 const fetchData = async () => {
@@ -29,6 +30,7 @@ const App = () => {
       <Features fetchPromise={fetchPromise} count={count} setCount={setCount} />
       <GetStarted />
       <Pricing pricingPromise={pricingPromise} />
+      <WorkFlow />
     </div>
   );
 };
