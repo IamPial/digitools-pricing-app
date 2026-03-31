@@ -7,9 +7,10 @@ const Features = ({ fetchPromise }) => {
   const data = use(fetchPromise);
   const [toggleBtn, setToggleBtn] = useState("products");
 
-  // const handleBuyButton = () => {
-  //   console.log();
-  // };
+  // console.log(data);
+  const handleBuyButton = (productInfo) => {
+    console.log(productInfo);
+  };
   return (
     <div>
       <div className="container mx-auto py-30">
@@ -38,7 +39,7 @@ const Features = ({ fetchPromise }) => {
         </div>
 
         {toggleBtn === "products" ? (
-          <MyProducts data={data} />
+          <MyProducts data={data} handleBuyButton={handleBuyButton} />
         ) : (
           <Carts data={data} />
         )}
