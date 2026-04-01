@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCheck } from "react-icons/fa6";
+import PropTypes from "prop-types";
 
 const PricingCard = ({ pricingList }) => {
   return (
@@ -76,6 +77,10 @@ const PricingCard = ({ pricingList }) => {
       )}
     </div>
   );
+};
+
+PricingCard.propTypes = {
+  pricingList: PropTypes.object.isRequired,
 };
 
 export default PricingCard;
