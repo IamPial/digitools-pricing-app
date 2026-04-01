@@ -76,6 +76,8 @@ Carts.propTypes = {
   setBuyItem: PropTypes.array.isRequired,
   amount: PropTypes.number.isRequired,
   setAmount: PropTypes.number.isRequired,
+  count: PropTypes.number.isRequired,
+  setCount: PropTypes.number.isRequired,
   handleDelete: PropTypes.func.isRequired,
 };
 
