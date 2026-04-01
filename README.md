@@ -15,6 +15,7 @@ This Product provide digital services and boost up workflow.Here user can buy th
 - When a user click on "Cart" button, this interface show a list of cart items.
 - User can also remove the cart items with click on "Remove" button, which is included on cart items. And also generating a toast message with the cart items name.
 - When user remove any items by click on "Remove" Button , it will decrease the cart list item value , total value and cart icons value top of the navbar.
+- By default , the cart section are empty and it's show up message with "Your cart is empty", when a user added an item to the cart it removes the empty message
 
 ### Technologies Used
 
