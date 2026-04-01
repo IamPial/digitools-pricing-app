@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Navbar from "./components/Navbar/Navbar";
 import Banner from "./components/Homepage/Banner";
 import Counter from "./components/Homepage/Counter";
@@ -21,6 +22,7 @@ const fetchPricingData = async () => {
   return res.json();
 };
 const pricingPromise = fetchPricingData();
+
 const App = () => {
   const [count, setCount] = useState(0);
   return (
@@ -35,6 +37,13 @@ const App = () => {
       <Footer />
     </div>
   );
+};
+
+App.propTypes = {
+  count: PropTypes.number.isRequired,
+  setCount: PropTypes.number.isRequired,
+  fetchPromise: PropTypes.object.isRequired,
+  pricingPromise: PropTypes.object.isRequired,
 };
 
 export default App;
