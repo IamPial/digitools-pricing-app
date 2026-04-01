@@ -4,7 +4,7 @@ This Product provide digital services and boost up workflow.Here user can buy th
 
 ## Features
 
-**Pricing Features**
+**Product Features**
 
 - User can buy tool with " Buy Now" button
 - When user click "Buy Now" button , the button will turn into "Added to Cart"
