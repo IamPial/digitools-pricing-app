@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const MyProductBadge = ({ product }) => {
   return (
@@ -18,6 +19,10 @@ const MyProductBadge = ({ product }) => {
       )}
     </>
   );
+};
+
+MyProductBadge.propTypes = {
+  product: PropTypes.object,
 };
 
 export default MyProductBadge;
