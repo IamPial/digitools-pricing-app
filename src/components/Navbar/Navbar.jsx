@@ -2,13 +2,14 @@ import React from "react";
 import logoImg from "../../assets/logo.png";
 import cartImg from "../../assets/shopping-cart.png";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 const Navbar = ({ count }) => {
   const [toggleBtn, setToggleBtn] = useState("started");
 
   return (
     <div className="bg-base-100 shadow-sm py-3 sticky top-0 ">
-      <div className="navbar container mx-auto  ">
+      <div className="navbar container mx-auto">
         <div className="navbar-start gap-2 lg:gap-0">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -104,6 +105,10 @@ const Navbar = ({ count }) => {
       </div>
     </div>
   );
+};
+
+Navbar.propTypes = {
+  count: PropTypes.number.isRequired,
 };
 
 export default Navbar;
