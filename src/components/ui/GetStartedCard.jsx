@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const GetStartedCard = ({ title, description, cardImg, value }) => {
   return (
@@ -25,4 +26,10 @@ const GetStartedCard = ({ title, description, cardImg, value }) => {
   );
 };
 
+GetStartedCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  cardImg: PropTypes.string.isRequired,
+};
 export default GetStartedCard;
