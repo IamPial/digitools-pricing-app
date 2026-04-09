@@ -12,7 +12,7 @@
 
 ## Preview
 
-![DigiTools Banner](./src/assets/digitools.png)
+![DigiTools Banner](./public/digitools.png)
 
 ---
 
