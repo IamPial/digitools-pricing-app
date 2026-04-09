@@ -1,30 +1,221 @@
-# Digital Tools Buying Website
+#  DigiTools — Premium Digital Tools Marketplace
 
-This Product provide digital services and boost up workflow.Here user can buy their digital tool for any purpose with a cheapest price.Digital tool mainly work on reduce user time to create those thing with taking a lot of time.It's provide some digital tools with ready to use any time.
+> **DigiTools** is a modern, responsive digital product marketplace built with React. Browse premium AI tools, design assets, and productivity software — add them to your cart and checkout seamlessly, all in one beautifully designed platform.
 
-## Features
+---
 
-**Product Features**
+## 🌐 Live Demo
 
-- User can buy tool with " Buy Now" button
-- When an user click on "Buy Now" button , the button will turn into "Added to Cart", And also generating a toast message with the name of the product.
-- And when an user click on "Buy Now" button, the cart button will increase the cart list item, and also increase the Navbar cart icons value.
+🔗 [View Live Site](https://buydigitools.netlify.app/) 
 
-**Cart Features**
+---
 
-- When an user click on "Cart" button, this interface show a list of cart items.
-- User can also remove the cart items with click on "Remove" button, which is included on cart items. And also generating a toast message with the cart items name.
-- When an user remove any items by click on "Remove" Button , it will decrease the cart list item value , total value and cart icons value top of the navbar.
-- By default , the cart section are empty and it's show up message with "Your cart is empty", when a user added an item to the cart it removes the empty message
+## Preview
 
-**Payment Features**
+![DigiTools Banner](./src/assets/digitools.png)
 
-- When an user click on the "Proceed to checkout" Button, then the react toastify occurring a message called "Payment Successful". And also remove the all cart items from this section ,and then the cart item value turn into 0 , and also show the cart section "Your cart is empty"
+---
 
-### Technologies Used
+##  Features
 
-- React.js
-- Tailwind CSS, DaisyUI
-- JavaScript (ES6+)
-- React-Toastify (NPM Package)
-- JSON (for product data)
+-  **Product Catalog** — Browse curated premium digital tools
+-  **Shopping Cart** — Add/remove products with live cart count in Navbar
+-  **Checkout** — Proceed to payment and clear cart on success
+-  **Product Badges** — Visual tags like `New`, `Best Seller`, `Popular`
+-  **Stats Counter** — Showcase active users, tools & ratings
+-  **Toast Notifications** — Instant feedback on every cart action
+-  **Fully Responsive** — Mobile, tablet & desktop optimized
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| ⚛️ **React 19** | UI Library |
+| 🎨 **Tailwind CSS v4** | Utility-first styling |
+| 🌼 **DaisyUI** | UI Component library |
+| ⚡ **React `use()` Hook** | Async data fetching (Promise-based) |
+| 🔔 **React Toastify** | Toast notifications |
+| 🖱️ **React Icons** | Icon library |
+| 🖋️ **Manrope** | Typography (Google Fonts) |
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── assets/                            # Images, icons, logos
+│
+└── components/
+    ├── Features/
+    │   ├── Carts/
+    │   │   ├── Carts.jsx              # Cart view with total & checkout
+    │   │   └── CartsCard.jsx          # Individual cart item
+    │   │
+    │   ├── MyProducts/
+    │   │   ├── MyProductBadge.jsx     # Tag badge (New/Best Seller/etc)
+    │   │   ├── MyProductCard.jsx      # Individual product card
+    │   │   ├── MyProductFeatureListItem.jsx
+    │   │   └── MyProducts.jsx         # Product grid
+    │   │
+    │   └── Features.jsx               # Products/Cart toggle section
+    │
+    ├── Homepage/
+    │   ├── Banner.jsx                 # Hero section
+    │   ├── Counter.jsx                # Stats (Users, Tools, Rating)
+    │   ├── Footer.jsx                 # Footer with links & social
+    │   ├── GetStarted.jsx             # 3-step onboarding section
+    │   ├── Pricing.jsx                # Pricing section
+    │   └── WorkFlow.jsx               # CTA section
+    │
+    ├── Navbar/
+    │   └── Navbar.jsx                 # Sticky navbar with cart count
+    │
+    └── ui/
+        ├── GetStartedCard.jsx         # Onboarding step card
+        └── PricingCard.jsx            # Pricing plan card
+
+App.css                                # Tailwind + Google Fonts
+App.jsx                                # Root component & state management
+main.jsx                               # App entry point
+
+public/
+├── products.json                      # Product data
+└── pricing.json                       # Pricing plan data
+```
+
+---
+
+##  Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) v18+
+- npm or yarn
+
+### Installation
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/IamPial/digitools-pricing-app.git
+cd digitools-pricing-app
+```
+
+**2. Install dependencies**
+```bash
+npm install
+```
+
+**3. Start the development server**
+```bash
+npm run dev
+```
+
+**4. Open in browser**
+```
+http://localhost:5173
+```
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 🗃️ State Management
+
+State is managed in `App.jsx` and passed down via props:
+
+| State | Type | Description |
+|---|---|---|
+| `count` | `number` | Total items in cart (shown in Navbar) |
+| `buyItem` | `array` | List of products added to cart |
+| `amount` | `number` | Total price of cart items |
+| `toggleBtn` | `string` | Switch between Products / Cart view |
+
+### Cart Logic
+
+- **Add to cart** → `handleBuyItem()` in `MyProductCard` — prevents duplicate entries
+- **Remove from cart** → `handleDelete()` in `Carts` — updates count & total
+- **Checkout** → `handlePayment()` — clears cart and resets all state
+
+---
+
+## 📄 Data Structure
+
+### `products.json`
+```json
+[
+  {
+    "id": 1,
+    "name": "Starter Resume Kit",
+    "description": "Perfect for beginners to create clean and professional resumes quickly.",
+    "price": 0,
+    "period": "one-time",
+    "tagType": "new",
+    "features": ["10+ templates", "Basic customization", "Download as PDF"],
+    "icon": "https://i.ibb.co.com/p66rxDtM/writing-2327400-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Pro Resume Builder",
+    "description": "Advanced resume builder with ATS-friendly optimization tools.",
+    "price": 15,
+    "period": "monthly",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF", "Custom sections"],
+    "icon": "https://i.ibb.co.com/gLF6c8M9/design-tool.png"
+  }
+  // ...and 6 more products
+]
+```
+
+### `pricing.json`
+```json
+[
+  {
+    "id": 1,
+    "plan": "Starter",
+    "tagline": "Perfect for getting started",
+    "price": 0,
+    "period": "monthly",
+    "isPopular": false,
+    "tag": "New",
+    "features": ["Access to 10 free tools", "Basic templates", "..."],
+    "label": "Get Started Free"
+  }
+  // ...and 2 more plans (Pro, Enterprise)
+]
+```
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a branch: 
+3. Commit: 
+4. Push: 
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+---
+
+## Author
+
+**Pial Uddin**
+- GitHub: [IamPial](https://github.com/IamPial)
+- LinkedIn: [linkedin](https://linkedin.com/in/pial-uddin)
+
+
